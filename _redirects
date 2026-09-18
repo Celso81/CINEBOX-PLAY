@@ -1,0 +1,14 @@
+# Redirects — Cloudflare Pages
+# Tradução do netlify.toml (18/09/2026). A ordem importa: a primeira regra
+# que casa é a que vale, então o curinga /* fica SEMPRE por último.
+
+# Atalhos para divulgar na bio das redes
+/teste     /#teste     301
+/planos    /#planos    301
+
+# Site de página única: qualquer rota inexistente serve a home.
+# ⚠️ Isto devolve HTTP 200 para QUALQUER URL — inclusive as inventadas.
+# Mantido igual ao comportamento atual da Netlify para a migração não mudar
+# duas coisas ao mesmo tempo. Para SEO o certo é uma 404 de verdade, como
+# já foi feito no Central CFTV PE. Trocar depois que a migração estiver de pé.
+/*         /index.html  200

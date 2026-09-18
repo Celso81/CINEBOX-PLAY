@@ -1,0 +1,13 @@
+# Backups locais — não vão pro repositório
+*.bak
+*.bak-*
+index.antes-*.html
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# A Cloudflare ignora este arquivo; fica só como histórico local caso
+# seja preciso voltar para a Netlify durante a migração.
+# (não está ignorado de propósito — só documentado aqui)

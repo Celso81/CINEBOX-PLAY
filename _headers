@@ -1,0 +1,18 @@
+# Cabeçalhos — Cloudflare Pages
+# Tradução literal do que estava no netlify.toml (18/09/2026).
+# A Cloudflare ignora o netlify.toml; quem manda aqui é este arquivo.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache longo para assets versionados
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML sempre revalidado — publicar tem que aparecer na hora
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

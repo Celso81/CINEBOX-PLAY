@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C0E15"/>
+      <stop offset="1" stop-color="#06070B"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.18" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#FF9F1C" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FF9F1C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.88" cy="0.8" r="0.6">
+      <stop offset="0" stop-color="#C81E00" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#C81E00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFD98A"/>
+      <stop offset="0.55" stop-color="#FFC24B"/>
+      <stop offset="1" stop-color="#FF9F1C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- logo -->
+  <rect x="80" y="72" width="66" height="66" rx="17" fill="url(#gold)"/>
+  <path d="M104 88v34l26-17-26-17Z" fill="#1B1000"/>
+  <text x="162" y="112" font-family="Impact, 'Arial Black', sans-serif" font-size="42"
+        fill="#F3F5F9" letter-spacing="1">CINEBOX</text>
+  <text x="164" y="133" font-family="Arial, Helvetica, sans-serif" font-size="12"
+        font-weight="700" fill="#FFC24B" letter-spacing="4">PLAY · MELHOR IPTV</text>
+
+  <!-- headline -->
+  <text x="80" y="255" font-family="Impact, 'Arial Black', sans-serif" font-size="76" fill="#F3F5F9">A MELHOR IPTV</text>
+  <text x="80" y="335" font-family="Impact, 'Arial Black', sans-serif" font-size="76" fill="url(#gold)">DO BRASIL</text>
+
+  <text x="80" y="386" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#C4CBD7">
+    +18.000 canais ao vivo · +65.000 filmes e séries
+  </text>
+  <text x="80" y="418" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#C4CBD7">
+    4K de verdade, sem travar
+  </text>
+
+  <!-- selo teste -->
+  <rect x="80" y="452" width="420" height="70" rx="35" fill="#25D366"/>
+  <text x="290" y="496" font-family="Arial, Helvetica, sans-serif" font-size="26"
+        font-weight="700" text-anchor="middle" fill="#03210F">TESTE GRÁTIS DE 6 HORAS</text>
+
+  <text x="80" y="566" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#98A1B2">
+    Ativação em 5 minutos · Sem fidelidade · Suporte no WhatsApp
+  </text>
+
+  <!-- mock de TV -->
+  <g transform="translate(760,180)">
+    <rect x="0" y="0" width="380" height="238" rx="16" fill="#1D2230"/>
+    <rect x="9" y="9" width="362" height="220" rx="10" fill="#0B0E15"/>
+    <rect x="22" y="22" width="108" height="96" rx="8" fill="#4A2B1A"/>
+    <rect x="139" y="22" width="108" height="96" rx="8" fill="#1E3A4C"/>
+    <rect x="256" y="22" width="102" height="96" rx="8" fill="#432033"/>
+    <rect x="22" y="127" width="108" height="96" rx="8" fill="#1F3B2A"/>
+    <rect x="139" y="127" width="108" height="96" rx="8" fill="#3B3520"/>
+    <rect x="256" y="127" width="102" height="96" rx="8" fill="#2C2545"/>
+    <rect x="26" y="26" width="76" height="24" rx="5" fill="#FF3B30"/>
+    <text x="64" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13"
+          font-weight="700" text-anchor="middle" fill="#FFFFFF">AO VIVO</text>
+    <rect x="252" y="192" width="98" height="26" rx="6" fill="#06070B" stroke="#FFC24B" stroke-width="1.5"/>
+    <text x="301" y="210" font-family="Arial, Helvetica, sans-serif" font-size="13"
+          font-weight="700" text-anchor="middle" fill="#FFC24B">4K UHD</text>
+    <rect x="150" y="248" width="80" height="8" rx="4" fill="#242A3A"/>
+  </g>
+</svg>

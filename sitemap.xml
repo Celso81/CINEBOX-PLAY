@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Site de página única: só a home entra aqui.
+  URLs com âncora (#planos, #faq) NÃO devem ser listadas — o Google as
+  normaliza para a página raiz e isso só polui o relatório do Search Console.
+
+  ⚠️ Quando comprar o domínio próprio, troque a URL abaixo e atualize <lastmod>.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://cineboxplay.netlify.app/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>

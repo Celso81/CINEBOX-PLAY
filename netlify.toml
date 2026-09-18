@@ -1,0 +1,63 @@
+##############################################################
+# CINEBOX PLAY — Configuração da Netlify
+##############################################################
+
+[build]
+  publish = "."
+
+##############################################################
+# CABEÇALHOS DE SEGURANÇA E PERFORMANCE
+##############################################################
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Cache longo para assets estáticos (melhora o Core Web Vitals = melhora o SEO)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+##############################################################
+# REDIRECTS
+#
+# O site roda hoje em https://cineboxplay.netlify.app (sem www).
+#
+# QUANDO COMPRAR O DOMÍNIO PRÓPRIO, descomente o bloco abaixo
+# trocando pelo seu domínio. Ele manda a versão sem www para a
+# com www, evitando o Google indexar as duas e dividir a força.
+#
+# [[redirects]]
+#   from = "https://seudominio.com.br/*"
+#   to = "https://www.seudominio.com.br/:splat"
+#   status = 301
+#   force = true
+##############################################################
+
+# Atalhos úteis para divulgar na bio das redes sociais
+[[redirects]]
+  from = "/teste"
+  to = "/#teste"
+  status = 301
+
+[[redirects]]
+  from = "/planos"
+  to = "/#planos"
+  status = 301
+
+# Qualquer rota inexistente volta para a home (site de página única)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

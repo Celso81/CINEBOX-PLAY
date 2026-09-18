@@ -1,0 +1,10 @@
+# CINEBOX PLAY — Melhor IPTV do Brasil
+# ⚠️ Troque o domínio abaixo pelo seu domínio real.
+
+User-agent: *
+Allow: /
+
+# Bloqueia rastreamento de arquivos irrelevantes
+Disallow: /LEIA-ME.md
+
+Sitemap: https://cineboxplay.netlify.app/sitemap.xml
