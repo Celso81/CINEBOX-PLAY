@@ -1,0 +1,29 @@
+{
+  // CINEBOX PLAY — Cloudflare Workers Static Assets
+  //
+  // Mesmo padrão do VunoFlix, que vive nesta mesma conta (VUNO FLIX):
+  // estáticos em public/, sem build de front-end, publica no push do main.
+  //
+  // Por que public/ e não a raiz: a raiz tem as ferramentas (LEIA-ME.md,
+  // netlify.toml, trocar-dominio.js). Servindo a raiz, elas ficariam
+  // públicas na internet. Só o que está em public/ vai pro ar.
+
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cinebox-play",
+  "compatibility_date": "2026-09-18",
+
+  "assets": {
+    "directory": "./public",
+
+    // Site de página única: rota inexistente serve a home.
+    // Mantido igual ao comportamento da Netlify para a migração não mudar
+    // duas coisas ao mesmo tempo. Trocar para "404-page" depois, como já
+    // foi feito no Central CFTV PE — devolver 200 para qualquer URL faz o
+    // Google enxergar páginas duplicadas infinitas.
+    "not_found_handling": "single-page-application"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}
