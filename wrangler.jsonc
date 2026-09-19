@@ -8,9 +8,13 @@
   // netlify.toml, trocar-dominio.js). Servindo a raiz, elas ficariam
   // públicas na internet. Só o que está em public/ vai pro ar.
 
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cinebox-play",
   "compatibility_date": "2026-09-18",
+
+  // O painel mostrava "Nenhuma rota ativa" e o endereço devolvia 404.
+  // Sem rota, o Worker publica mas não atende ninguém. Isto liga o
+  // endereço <nome>.<subdominio>.workers.dev da conta.
+  "workers_dev": true,
 
   "assets": {
     "directory": "./public",
