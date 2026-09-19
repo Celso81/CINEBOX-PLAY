@@ -7,4 +7,4 @@ Allow: /
 # Bloqueia rastreamento de arquivos irrelevantes
 Disallow: /LEIA-ME.md
 
-Sitemap: https://cineboxplay.netlify.app/sitemap.xml
+Sitemap: https://cinebox-play.vuno-flix.workers.dev/sitemap.xml

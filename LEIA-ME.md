@@ -23,7 +23,7 @@ no GitHub e conecte na Netlify. Aí toda alteração que você salvar publica so
 
 ## 2. Endereço atual do site
 
-O site roda hoje em **https://cineboxplay.netlify.app** e todas as URLs internas
+O site roda hoje em **https://cinebox-play.vuno-flix.workers.dev** e todas as URLs internas
 (canonical, Open Graph, JSON-LD, sitemap) já apontam para lá. Funciona normalmente:
 indexa no Google, o preview do link aparece no WhatsApp, os rich results funcionam.
 
@@ -44,7 +44,7 @@ O domínio é **obrigatório** se você quer ranquear no Google. O `.netlify.app
 
 | Arquivo | O que trocar |
 |---|---|
-| `index.html` | Todas as ocorrências de `cineboxplay.netlify.app` (canonical, Open Graph e JSON-LD) |
+| `index.html` | Todas as ocorrências de `cinebox-play.vuno-flix.workers.dev` (canonical, Open Graph e JSON-LD) |
 | `sitemap.xml` | A URL da home |
 | `robots.txt` | A linha do `Sitemap:` |
 | `netlify.toml` | Descomentar o bloco de redirect `sem-www` → `www` |
