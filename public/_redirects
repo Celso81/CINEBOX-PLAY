@@ -1,14 +1,18 @@
-# Redirects — Cloudflare Pages
-# Tradução do netlify.toml (18/09/2026). A ordem importa: a primeira regra
-# que casa é a que vale, então o curinga /* fica SEMPRE por último.
+# Redirects — Cloudflare Workers Static Assets
+# Traduzido do netlify.toml em 18/09/2026.
 
 # Atalhos para divulgar na bio das redes
 /teste     /#teste     301
 /planos    /#planos    301
 
-# Site de página única: qualquer rota inexistente serve a home.
-# ⚠️ Isto devolve HTTP 200 para QUALQUER URL — inclusive as inventadas.
-# Mantido igual ao comportamento atual da Netlify para a migração não mudar
-# duas coisas ao mesmo tempo. Para SEO o certo é uma 404 de verdade, como
-# já foi feito no Central CFTV PE. Trocar depois que a migração estiver de pé.
-/*         /index.html  200
+# ⚠️ NÃO recriar aqui a regra curinga que existia na Netlify:
+#
+#     /*  /index.html  200
+#
+# A Cloudflare a REJEITA e derruba o deploy inteiro:
+#   "Line 14: Infinite loop detected in this rule. This would cause a redirect
+#    to strip `.html` or `/index` and end up triggering this rule again."
+#
+# Ela já serve o index.html na raiz, então a regra se retroalimenta. O mesmo
+# efeito (rota inexistente cai na home) vem de `not_found_handling` no
+# wrangler.jsonc — que já está configurado. Não precisa das duas.
